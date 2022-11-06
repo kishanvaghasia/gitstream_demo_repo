@@ -14,3 +14,7 @@ b = temp;
 
 console.log(`The value of a after swapping: ${a}`);
 console.log(`The value of b after swapping: ${b}`);
+
+
+console.log(`The value ofasdng: ${a}`);
+console.log(`The asdfter swapping: ${b}`);
