@@ -18,3 +18,5 @@ console.log(`The value of b after swapping: ${b}`);
 
 console.log(`The value ofasdng: ${a}`);
 console.log(`The asdfter swapping: ${b}`);
+
+console.log('hello this is a test log')
