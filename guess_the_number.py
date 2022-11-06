@@ -1,6 +1,6 @@
 import random
 
-top_of_range = input("Enter the limit of random Number:")
+top_of_range = input("Enter the limit of random the Number:")
 
 if top_of_range.isdigit():
     top_of_range = int(top_of_range)  # converting it to an integer
