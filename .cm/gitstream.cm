@@ -47,8 +47,19 @@ automations:
       # You can uncomment the following action to get gitStream can even automatically approve 
       # such PRs to save reviewers time for such changes.
       # - action: approve@v1
-
-
+      
+      
+allow_formatting:
+    if:
+      - {{ files | extensions | match(list=['js', 'ts']) | every }}
+      - {{ source.diff.files | isFormattingChange }}
+    run:
+      - action: approve@v1
+      - action: add-label@v1
+        args:
+          label: code-formatting
+          
+          
 calc:
   etr: {{ branch | estimatedReviewTime }}
 is:
