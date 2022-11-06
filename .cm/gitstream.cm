@@ -28,8 +28,9 @@ automations:
       - action : add-label@v1
         args:
           label: "{{ calc.etr }} min review"
-          color: {{ 'E94637' if (calc.etr >= 20) else ('FBBD10' if (calc.etr >= 5) else '36A853') }}
 
+          color: {{ 'E94637' if (calc.etr >= 20) else ('FBBD10' if (calc.etr >= 5) else '36A853') }}
+          
  allow_formatting:
     if:
       - {{ files | extensions | match(list=['js', 'ts']) | every }}
@@ -39,6 +40,8 @@ automations:
       - action: add-label@v1
         args:
           label: code-formatting
+      
+
 
 calc:
   etr: {{ branch | estimatedReviewTime }}
